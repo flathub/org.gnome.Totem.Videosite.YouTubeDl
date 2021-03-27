@@ -20,8 +20,8 @@ modules:
         url: https://yt-dl.org/downloads/latest/youtube-dl-2020.11.12.tar.gz
         sha256: aeb00b2079c4711de7eea2a91f6923ebade84c5e985b0caeb47d572395d42831
     cleanup:
-      - 'etc/'
-      - 'share/'
+      - etc/
+      - share/
 
   - name: totem-pl-parser-youtube-dl
     buildsystem: simple
@@ -29,7 +29,8 @@ modules:
       - install -Dm755 totem-ydl-parser.py ${FLATPAK_DEST}/bin/01-totem-pl-parser-videosite-youtube-dl
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.gnome.Totem.Videosite.YouTubeDl.metainfo.xml
-      - appstream-compose --basename=org.gnome.Totem.Videosite.YouTubeDl --prefix=${FLATPAK_DEST} --origin=flatpak org.gnome.Totem.Videosite.YouTubeDl
+      - appstream-compose --basename=org.gnome.Totem.Videosite.YouTubeDl --prefix=${FLATPAK_DEST}
+        --origin=flatpak org.gnome.Totem.Videosite.YouTubeDl
     sources:
       - type: git
         url: https://github.com/MathieuDuponchelle/totem-ydl-parser.git
