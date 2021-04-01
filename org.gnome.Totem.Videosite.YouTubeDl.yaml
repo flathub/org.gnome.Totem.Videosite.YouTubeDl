@@ -17,8 +17,8 @@ modules:
       - pip3 install .
     sources:
       - type: archive
-        url: https://github.com/ytdl-org/youtube-dl/releases/download/2021.03.25/youtube-dl-2021.03.25.tar.gz
-        sha256: a303cfd327938e3f15890099be79958cc17d536d1f985301d5462e487af3485f
+        url: https://github.com/ytdl-org/youtube-dl/releases/download/2021.04.01/youtube-dl-2021.04.01.tar.gz
+        sha256: f098ef95933a33096f60cb8c3bfbde710f6f84c9cad1b093082584bdc4a089ef
         x-checker-data:
           type: anitya
           project-id: 5292
