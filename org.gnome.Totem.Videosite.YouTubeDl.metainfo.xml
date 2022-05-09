@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
   <id>org.gnome.Totem.Videosite.YouTubeDl</id>
-  <extends>org.gnome.Totem.Videosite</extends>
+  <extends>org.gnome.Totem</extends>
   <name>yt-dl totem-pl-parser plugin</name>
   <summary>Integrate totem-pl-parser with yt-dl</summary>
   <url type="homepage">https://github.com/MathieuDuponchelle/totem-ydl-parser/</url>
