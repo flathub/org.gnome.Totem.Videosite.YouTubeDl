@@ -1,7 +1,7 @@
 id: org.gnome.Totem.Videosite.YouTubeDl
 runtime: org.gnome.Totem
 runtime-version: stable
-sdk: org.gnome.Sdk//3.38
+sdk: org.gnome.Sdk//42
 build-extension: true
 separate-locales: false
 appstream-compose: false
@@ -38,6 +38,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/MathieuDuponchelle/totem-ydl-parser.git
-        commit: 9d531edaa1ab37f59d736a7fa9a451e09a887077
+        commit: 14d20ac274476f00b8ad9f980941fcf3e077e900
       - type: file
         path: org.gnome.Totem.Videosite.YouTubeDl.metainfo.xml
