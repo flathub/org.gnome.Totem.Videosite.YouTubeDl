@@ -11,18 +11,18 @@ build-options:
     PIP_TARGET: /app/lib/totem-pl-parser/YouTubeDl/site-packages
 
 modules:
-  - name: youtube-dl
+  - name: yt-dlp
     buildsystem: simple
     build-commands:
       - pip3 install .
     sources:
       - type: archive
-        url: https://github.com/ytdl-org/youtube-dl/releases/download/2021.12.17/youtube-dl-2021.12.17.tar.gz
-        sha256: 9f3b99c8b778455165b4525f21505e86c7ff565f3ac319e19733d810194135df
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.01.26/yt-dlp.tar.gz
+        sha256: f9b62c5f8c3db910d693a7ac1477f44696a923ff9b0a3f9d87fefea4e10e9e04
         x-checker-data:
           type: anitya
           project-id: 5292
-          url-template: https://github.com/ytdl-org/youtube-dl/releases/download/$version/youtube-dl-$version.tar.gz
+          url-template: https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp.tar.gz
     cleanup:
       - etc/
       - share/
@@ -38,6 +38,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/MathieuDuponchelle/totem-ydl-parser.git
-        commit: 14d20ac274476f00b8ad9f980941fcf3e077e900
+        commit: 5d68b98b60db11a9f9e1f3451d7a487087ab7f3e
       - type: file
         path: org.gnome.Totem.Videosite.YouTubeDl.metainfo.xml
