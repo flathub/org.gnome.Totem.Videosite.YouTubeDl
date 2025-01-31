@@ -32,8 +32,8 @@ modules:
       - install -Dm755 totem-ydl-parser.py ${FLATPAK_DEST}/bin/01-totem-pl-parser-videosite-youtube-dl
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.gnome.Totem.Videosite.YouTubeDl.metainfo.xml
-      - appstream-compose --basename=org.gnome.Totem.Videosite.YouTubeDl --prefix=${FLATPAK_DEST}
-        --origin=flatpak org.gnome.Totem.Videosite.YouTubeDl
+      - appstreamcli compose --components=${FLATPAK_ID} --prefix=/ --origin=${FLATPAK_ID}
+        --result-root=${FLATPAK_DEST} --data-dir=${FLATPAK_DEST}/share/app-info/xmls ${FLATPAK_DEST}
     sources:
       - type: git
         url: https://github.com/MathieuDuponchelle/totem-ydl-parser.git
