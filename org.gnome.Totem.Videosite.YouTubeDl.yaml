@@ -14,14 +14,15 @@ modules:
   - name: yt-dlp
     buildsystem: simple
     build-commands:
-      - pip3 install yt_dlp-2025.1.26-py3-none-any.whl
+      - pip3 install --no-index --no-deps yt_dlp-*-py3-none-any.whl
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/33/9b/1b28a179fb4e1c751ab2a3d39c82606a9754a0d4521d7a9b7579e08aa5f8/yt_dlp-2025.1.26-py3-none-any.whl
         sha256: 3e76bd896b9f96601021ca192ca0fbdd195e3c3dcc28302a3a34c9bc4979da7b
         x-checker-data:
-          type: anitya
-          project-id: 5292
+          type: pypi
+          name: yt-dlp
+          packagetype: bdist_wheel
     cleanup:
       - etc/
       - share/
